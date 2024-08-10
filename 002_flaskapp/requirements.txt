@@ -5,8 +5,6 @@ itsdangerous==2.2.0
 Jinja2==3.1.4
 joblib==1.4.2
 MarkupSafe==2.1.5
-# Editable install with no version control (my_custom_module==0.1)
--e /Users/lygt/Documents/data scientsist learning/techlent/homework/python developer/popular_selection/002_flaskapp
 numpy==2.0.1
 pandas==2.2.2
 python-dateutil==2.9.0.post0

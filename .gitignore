@@ -1,0 +1,7 @@
+**/__pycache__/**
+venv
+**/processed/
+**/uploads/
+002_flaskapp/my_custom_module.egg-info/
+002_flaskapp/my_custom_module/__pycache__/__init__.cpython-311.pyc
+002_flaskapp/my_custom_module/__pycache__/transformers.cpython-311.pyc
