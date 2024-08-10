@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Popular Product Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>If the Product Is Popular Or Not</h1>
+      <h2>Upload a CSV File</h2>
+      <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="fileInput">Choose CSV File:</label>
+          <input type="file" name="file" id="fileInput" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+      <br>
+      
+      {% if raw_data %}
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Raw Data</h2>
+          <div class="table-responsive">
+            {{ raw_data|safe }}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Processed Data</h2>
+          <div class="table-responsive">
+            {{ processed_data|safe }}
+          </div>
+        </div>
+      </div>
+      <br>
+      <a href="{{ url_for('download_file', filename=filename) }}" class="btn btn-primary">Download Processed File</a>
+      {% endif %}
+      
+    </div>
+  </body>
+</html>
